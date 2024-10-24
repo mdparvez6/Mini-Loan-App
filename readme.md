@@ -19,6 +19,9 @@ Follow these steps to run both the frontend and backend of the project:
 
 ### 3. **Set Up Dependencies**
 
+
+- Before installing dependencies for the frontend and backend, we need to install root-level dependencies, including concurrently.
+- npm install concurrently
 - Open the `package.json` file in the root directory of the project and ensure the following scripts are included:
 
   ```json
