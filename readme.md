@@ -63,4 +63,12 @@ This command will:
 
 ---
 
+Working of Mini-Loan-App
+
+https://github.com/user-attachments/assets/65231a11-3b57-4efb-8eb9-abd4e3be0557
+
+
+
+
+
 Now your project should be running, with the frontend and backend both active!
