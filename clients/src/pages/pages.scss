@@ -1,0 +1,105 @@
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #000000; /* Added background color for contrast */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+//! ---------------Header----------------------
+.header {
+  text-align: center;
+  margin-bottom: 40px; /* Increased margin for spacing */
+  padding-top: 50px;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #36b3eb; /* Darker text color for contrast */
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: #36b3eb;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #36b3eb; /* Primary color for the text */
+    margin-top: 10px;
+    line-height: 1.5; /* Increased line spacing for readability */
+  }
+}
+
+//!--------------About Section Features---------------
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Add consistent space between features */
+  max-width: 1000px; /* Limit the width of the section */
+  margin: 0 auto;
+}
+
+.feature {
+  flex: 1 1 45%; /* Allows 2 items per row on medium screens */
+  margin: 20px;
+  padding: 25px;
+  border: 1px solid #c0c0c083;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.2s ease-in;
+  background-color: #fff; /* White background for feature boxes */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5; /* Increased line spacing for readability */
+  }
+
+  &:hover {
+    background-color: #36b3eb;
+    color: white; /* Change text color on hover */
+    transform: scale(1.05); /* Subtle scale effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  }
+}
+
+//!--------------Button Styles---------------
+.btn-cntnr {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #36b3eb;
+    border: 2px solid #36b3eb;
+    background-color: transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #36b3eb;
+      color: white;
+    }
+  }
+}

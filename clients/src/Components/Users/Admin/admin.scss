@@ -1,0 +1,70 @@
+.request-container {
+  padding: 20px;
+
+  .request-heading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .table-cntnr {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    .btn-approve {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #218838;
+      }
+    }
+
+    .btn-reject {
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #c82333;
+      }
+    }
+
+    .btn-done {
+      background-color: #6c757d;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: not-allowed;
+    }
+  }
+
+  .no-requests-message {
+    margin-top: 20px;
+    color: #777;
+    font-size: 1.1rem;
+  }
+}

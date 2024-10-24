@@ -1,0 +1,331 @@
+.customer-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  justify-content: center;
+
+  .dashboard-heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .cust-btn-cntnr {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    .dashboard-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .terms-and-conditions {
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+
+    .terms-heading {
+      font-size: 1.8rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .terms-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+  }
+}
+
+.payloan {
+  padding: 2rem;
+  margin-top: 35px;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+
+  .payloan-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+
+      th,
+      td {
+        padding: 1rem;
+        border: 1px solid #ddd;
+        text-align: center;
+        font-size: 1rem;
+        color: #000000;
+      }
+
+      th {
+        background-color: #007bff;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .status-paid {
+        color: #28a745;
+        font-weight: bold;
+      }
+
+      .status-pending {
+        color: #dc3545;
+        font-weight: bold;
+      }
+
+      .pay-button {
+        background-color: #28a745;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .pay-button:hover {
+        background-color: #218838;
+      }
+
+      .paid-button {
+        background-color: #6c757d;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #000000;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .repay-button {
+      background-color: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .repay-button:hover {
+      background-color: #0056b3;
+    }
+
+    .cancel-button {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #dc3545;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
+
+.loan-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 6rem auto;
+
+  .loan-form {
+    margin-bottom: 2rem;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #36b3eb;
+    }
+
+    label {
+      color: #36b3eb;
+
+      font-weight: bold;
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .btn-cntrn {
+      display: flex;
+      justify-content: space-between;
+
+      .calculate-btn,
+      .apply-btn {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .calculate-btn {
+        background-color: #007bff;
+        color: white;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+
+      .apply-btn {
+        background-color: #28a745;
+        color: white;
+
+        &:hover {
+          background-color: #218838;
+        }
+      }
+    }
+  }
+
+  .payments-container {
+    max-width: 600px;
+    h2 {
+      text-align: center;
+      color: #36b3eb;
+      margin-bottom: 1rem;
+    }
+
+    .installments-list {
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          background: #000000;
+          border-radius: 5px;
+          margin: 0.5rem 0;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.view-loan-container {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+  padding-top: 70px;
+  text-align: center;
+
+  .view-loan-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #36b3eb;
+  }
+
+  .error-message {
+    color: red;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .table-cntnr {
+    overflow-x: auto;
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        color: #36b3eb;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+}

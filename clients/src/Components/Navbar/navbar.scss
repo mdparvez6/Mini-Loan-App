@@ -1,0 +1,129 @@
+.navbar {
+  background-color: #000000; // White background for navbar
+  padding: 10px 20px; // Padding for navbar
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  position: fixed; // Fixed position to stay at the top
+  width: 100%; // Full width of the screen
+  top: 0; // Align to the top
+  z-index: 100; // Ensure it stays above other elements
+
+  .nav-container {
+    display: flex; // Flex container for alignment
+    justify-content: space-between; // Space between logo and nav links
+    align-items: center; // Center items vertically
+    // max-width: 1200px; // Max width of the container
+    margin: 0 auto; // Center the container
+    width: 100%; // Full width for responsiveness
+  }
+
+  .logo {
+    font-size: 1.5rem; // Logo font size
+    font-weight: bold; // Bold logo
+    color: #36b3eb; // Dark color for logo
+    text-decoration: none; // No underline for logo
+  }
+
+  .menu-toggle {
+    display: none; // Hide menu toggle by default
+    cursor: pointer; // Pointer cursor for interactive element
+
+    .bar {
+      width: 25px; // Width of menu bar
+      height: 3px; // Height of menu bar
+      background-color: #333; // Color of the bar
+      margin: 4px; // Spacing between bars
+      transition: all 0.3s ease; // Smooth transition for animations
+    }
+
+    &.open .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px); // Transform for animation
+    }
+
+    &.open .bar:nth-child(2) {
+      opacity: 0; // Hide middle bar
+    }
+
+    &.open .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px); // Transform for animation
+    }
+  }
+
+  .nav-links {
+    display: flex; // Flex container for navigation links
+    align-items: center; // Center links vertically
+    gap: 20px; // Space between links
+
+    .nav-list {
+      display: flex; // Flex container for the list
+      gap: 20px; // Space between list items
+      list-style: none; // Remove default list styling
+
+      li a {
+        color: #36b3eb; // Link color
+        text-decoration: none; // No underline for links
+        padding: 10px 0; // Padding for links
+        transition: color 0.3s ease; // Smooth color transition on hover
+
+        &:hover {
+          color: #007bff; // Change color on hover
+        }
+      }
+    }
+
+    .auth-buttons {
+      display: flex; // Flex container for auth buttons
+      gap: 10px; // Space between buttons
+
+      .btn {
+        padding: 8px 12px; // Padding for buttons
+        background-color: #007bff; // Primary button color
+        color: white; // Button text color
+        border: none; // No border
+        border-radius: 5px; // Rounded corners
+        cursor: pointer; // Pointer cursor for buttons
+        transition: background-color 0.3s ease; // Smooth background color transition
+
+        &:hover {
+          background-color: #0056b3; // Darker color on hover
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block; // Show menu toggle on small screens
+    }
+
+    .nav-links {
+      display: none; // Hide nav links by default on small screens
+      flex-direction: column; // Stack links vertically
+      align-items: flex-start; // Align items to the left
+      width: 100%; // Full width for dropdown
+      background-color: white; // Background for dropdown
+      position: absolute; // Positioning for dropdown
+      top: 60px; // Position below the navbar
+      left: 0; // Align to left
+      padding: 20px; // Padding for dropdown
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); // Shadow for dropdown
+
+      &.open {
+        display: flex; // Show links when menu is open
+      }
+
+      .nav-list {
+        flex-direction: column; // Stack list items vertically
+        width: 100%; // Full width for list items
+      }
+
+      .auth-buttons {
+        flex-direction: column; // Stack buttons vertically
+        width: 100%; // Full width for buttons
+
+        .btn {
+          width: 100%; // Full width for buttons on small screens
+        }
+      }
+    }
+  }
+}

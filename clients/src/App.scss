@@ -1,0 +1,89 @@
+$primaryColor: #007bff;
+$tableBackgroundColor: #4f71c7;
+$cellPadding: 10px;
+
+.App {
+  background-color: #000000; // Light background for contrast
+  min-height: 100vh; // Ensure full height
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-cntnr {
+  overflow-x: auto;
+  margin: 20px;
+
+  table {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 0.25em;
+    border-collapse: collapse;
+    background: #012b39;
+    color: #fff; // Ensure text color is readable against the background
+
+    th {
+      border-bottom: 2px solid #364043; // Slightly thicker border for better separation
+      color: #e2b842;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.75rem 1rem; // Increased padding for better spacing
+      text-align: left; // Align headers to the left for better readability
+    }
+
+    td {
+      border: 1px solid rgba(231, 231, 231, 0.2); // Softer border for cells
+      padding: 0.75em 1em; // Increased padding for consistency
+      text-align: center; // Center align for consistency
+      color: #fff;
+      font-weight: 400;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1); // Add subtle hover effect
+      }
+    }
+
+    tbody tr {
+      transition: background 0.25s ease; // Only change background for smoother effect
+    }
+
+    tbody tr:hover {
+      background: #014055; // Highlight row on hover
+    }
+
+    button {
+      padding: 6px 10px; // Increased padding for buttons
+      border-radius: 10px;
+      border: none; // Remove default border for buttons
+      background-color: $primaryColor; // Use primary color
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(
+          $primaryColor,
+          10%
+        ); // Darken on hover for better UX
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .table-cntnr {
+    overflow-x: auto;
+    margin: 10px;
+    padding: 0 10px; // Add padding for mobile view
+  }
+
+  table {
+    width: 100%; // Ensure table takes full width on smaller screens
+  }
+
+  th,
+  td {
+    font-size: 0.9rem; // Slightly smaller text for better fit
+  }
+}

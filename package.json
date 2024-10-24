@@ -1,0 +1,16 @@
+{
+  "name": "my-fullstack-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-frontend": "npm install --prefix clients",
+    "install-backend": "npm install --prefix Server",
+    "install-all": "npm run install-frontend && npm run install-backend",
+    "frontend": "npm start --prefix clients",
+    "backend": "npm run dev --prefix Server",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
